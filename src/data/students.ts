@@ -14,11 +14,14 @@ import kids13 from "../assets/art/kids-13.jpeg";
 import kids14 from "../assets/art/kids-14.jpeg";
 import kids15 from "../assets/art/kids-15.jpeg";
 import kids16 from "../assets/art/kids-16.jpeg";
+import kids17 from "../assets/art/kids-17.jpeg";
 import award1 from "../assets/art/award-1.jpeg";
 import award2 from "../assets/art/award-2.jpeg";
 import award3 from "../assets/art/award-3.jpeg";
 import award4 from "../assets/art/award-4.jpeg";
 import award5 from "../assets/art/award-5.jpeg";
+import award6 from "../assets/art/award-6.jpeg";
+import award7 from "../assets/art/award-7.jpeg";
 import type { ArtPiece } from "./artworks";
 
 export const kidsArtworks: ArtPiece[] = [
@@ -38,6 +41,7 @@ export const kidsArtworks: ArtPiece[] = [
   { id: 14, src: kids14, title: "Young Artist 14" },
   { id: 15, src: kids15, title: "Young Artist 15" },
   { id: 16, src: kids16, title: "Young Artist 16" },
+  { id: 17, src: kids17, title: "Young Artist 17" },
 ];
 
 export const awards: ArtPiece[] = [
@@ -46,4 +50,6 @@ export const awards: ArtPiece[] = [
   { id: 3, src: award3, title: "Award 3" },
   { id: 4, src: award4, title: "Award 4" },
   { id: 5, src: award5, title: "Award 5" },
+  { id: 6, src: award6, title: "Award 6" },
+  { id: 7, src: award7, title: "Award 7" },
 ];
