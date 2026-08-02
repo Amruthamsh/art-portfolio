@@ -1,37 +1,21 @@
 import { useState } from "react";
 import { artworks, categories, type Category } from "../data/artworks";
-import ImageCard from "./ImageCard";
+import { useLightbox } from "../hooks/useLightbox";
+import MasonryGrid from "./MasonryGrid";
 import Lightbox from "./Lightbox";
 
 export default function Gallery() {
   const [active, setActive] = useState<Category>("All");
-  const [lightboxId, setLightboxId] = useState<number | null>(null);
 
   const filtered =
     active === "All"
       ? artworks
       : artworks.filter((a) => a.category === active);
 
-  const lightboxArtwork = lightboxId !== null
-    ? artworks.find((a) => a.id === lightboxId)
-    : null;
-
-  const handlePrev = () => {
-    if (lightboxId === null) return;
-    const idx = filtered.findIndex((a) => a.id === lightboxId);
-    const prev = idx <= 0 ? filtered.length - 1 : idx - 1;
-    setLightboxId(filtered[prev].id);
-  };
-
-  const handleNext = () => {
-    if (lightboxId === null) return;
-    const idx = filtered.findIndex((a) => a.id === lightboxId);
-    const next = idx >= filtered.length - 1 ? 0 : idx + 1;
-    setLightboxId(filtered[next].id);
-  };
+  const lightbox = useLightbox(filtered);
 
   return (
-    <section className="px-6 pb-24">
+    <section id="gallery" className="px-6 pb-24">
       <h2 className="font-serif text-3xl md:text-4xl text-center text-neutral-900 mb-8">
         Gallery
       </h2>
@@ -53,24 +37,15 @@ export default function Gallery() {
         ))}
       </div>
 
-      <div className="columns-2 md:columns-3 lg:columns-4 gap-4 max-w-6xl mx-auto">
-        {filtered.map((artwork) => (
-          <div key={artwork.id} className="mb-4 break-inside-avoid">
-            <ImageCard
-              artwork={artwork}
-              onClick={() => setLightboxId(artwork.id)}
-            />
-          </div>
-        ))}
-      </div>
+      <MasonryGrid artworks={filtered} onSelect={lightbox.open} />
 
-      {lightboxArtwork && (
+      {lightbox.current && (
         <Lightbox
-          artwork={lightboxArtwork}
+          artwork={lightbox.current}
           artworks={filtered}
-          onClose={() => setLightboxId(null)}
-          onPrev={handlePrev}
-          onNext={handleNext}
+          onClose={lightbox.close}
+          onPrev={lightbox.prev}
+          onNext={lightbox.next}
         />
       )}
     </section>

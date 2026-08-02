@@ -1,7 +1,7 @@
-import type { Artwork } from "../data/artworks";
+import type { ArtPiece } from "../data/artworks";
 
 interface ImageCardProps {
-  artwork: Artwork;
+  artwork: ArtPiece;
   onClick: () => void;
 }
 
@@ -23,7 +23,6 @@ export default function ImageCard({ artwork, onClick }: ImageCardProps) {
         <p className="text-white text-sm font-medium tracking-wide">
           {artwork.title}
         </p>
-        <p className="text-white/70 text-xs mt-0.5">{artwork.category}</p>
       </div>
     </button>
   );

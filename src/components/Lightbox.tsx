@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import type { Artwork } from "../data/artworks";
+import type { ArtPiece } from "../data/artworks";
 
 interface LightboxProps {
-  artwork: Artwork;
-  artworks: Artwork[];
+  artwork: ArtPiece;
+  artworks: ArtPiece[];
   onClose: () => void;
   onPrev: () => void;
   onNext: () => void;
