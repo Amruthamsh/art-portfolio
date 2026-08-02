@@ -59,7 +59,7 @@ export default function Shop() {
               </p>
               <a
                 href={whatsappLink(
-                  `Hi! I'm interested in buying "${artwork.title}". Is it available?`,
+                  `Hi! I'm interested in buying "${artwork.title}". Please let me know by when it can be shipped.`,
                 )}
                 target="_blank"
                 rel="noreferrer"
