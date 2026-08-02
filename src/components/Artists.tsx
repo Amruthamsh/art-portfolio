@@ -28,7 +28,7 @@ const artists = [
       { src: amsh4 },
     ],
     description:
-      "Software Engineer @ Deloitte by profession, Amruthamsh explores every medium: from delicate pencil sketches to vibrant acrylics and ink.",
+      "Kusuma's son and a software engineer @ Deloitte by profession, Amruthamsh explores every medium: from delicate pencil sketches to vibrant acrylics and ink.",
   },
 ];
 
