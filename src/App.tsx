@@ -32,7 +32,7 @@ export default function App() {
       )}
       <footer className="pb-12 pt-4 text-center">
         <p className="text-neutral-400 text-sm">
-          Brush & Bloom &mdash; Made with love and paint-stained hands
+          Brush & Bloom... Made with love and paint-stained hands
         </p>
         <div className="mt-3 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-neutral-500">
           <a

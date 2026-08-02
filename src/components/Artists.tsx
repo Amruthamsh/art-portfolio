@@ -18,7 +18,7 @@ const artists = [
     name: "Amruthamsh",
     images: [amsh1, amsh2, amsh3, amsh4],
     description:
-      "A restless creative spirit. Amruthamsh explores every medium — from delicate pencil sketches to vibrant acrylics and ink.",
+      "Software Engineer @ Deloitte by profession, Amruthamsh explores every medium: from delicate pencil sketches to vibrant acrylics and ink.",
   },
 ];
 
