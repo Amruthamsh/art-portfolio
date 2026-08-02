@@ -11,7 +11,7 @@ import kids10 from "../assets/art/kids-10.jpeg";
 import kids11 from "../assets/art/kids-11.jpeg";
 import kids12 from "../assets/art/kids-12.jpeg";
 import kids13 from "../assets/art/kids-13.jpeg";
-import kids14 from "../assets/art/kids-14.jpeg";
+// import kids14 from "../assets/art/kids-14.jpeg";
 import kids15 from "../assets/art/kids-15.jpeg";
 import kids16 from "../assets/art/kids-16.jpeg";
 import kids17 from "../assets/art/kids-17.jpeg";
@@ -39,7 +39,7 @@ export const kidsArtworks: ArtPiece[] = [
   { id: 11, src: kids11, title: "" },
   { id: 12, src: kids12, title: "" },
   { id: 13, src: kids13, title: "" },
-  { id: 14, src: kids14, title: "" },
+  // { id: 14, src: kids14, title: "" },
   { id: 15, src: kids15, title: "" },
   { id: 16, src: kids16, title: "" },
   { id: 17, src: kids17, title: "" },
