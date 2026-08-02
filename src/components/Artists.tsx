@@ -10,13 +10,23 @@ import amsh4 from "../assets/art/amsh-4.jpeg";
 const artists = [
   {
     name: "Kusuma",
-    images: [kusuma1, kusuma2, kusuma3, kusuma4],
+    images: [
+      { src: kusuma1, position: "object-[50%_20%]" },
+      { src: kusuma2 },
+      { src: kusuma3 },
+      { src: kusuma4 },
+    ],
     description:
       "Artist, teacher, and dreamer. Kusuma conducts drawing classes from her home, patiently guiding young hands and hearts to find their own creative voice.",
   },
   {
     name: "Amruthamsh",
-    images: [amsh1, amsh2, amsh3, amsh4],
+    images: [
+      { src: amsh1 },
+      { src: amsh2 },
+      { src: amsh3 },
+      { src: amsh4 },
+    ],
     description:
       "Software Engineer @ Deloitte by profession, Amruthamsh explores every medium: from delicate pencil sketches to vibrant acrylics and ink.",
   },
@@ -36,9 +46,9 @@ export default function Artists() {
               {artist.images.map((img, i) => (
                 <img
                   key={i}
-                  src={img}
+                  src={img.src}
                   alt={`${artist.name} painting`}
-                  className="w-full aspect-square object-cover rounded-lg shadow-sm"
+                  className={`w-full aspect-square object-cover rounded-lg shadow-sm ${img.position ?? ""}`}
                   loading="lazy"
                 />
               ))}
