@@ -18,6 +18,7 @@ import award1 from "../assets/art/award-1.jpeg";
 import award2 from "../assets/art/award-2.jpeg";
 import award3 from "../assets/art/award-3.jpeg";
 import award4 from "../assets/art/award-4.jpeg";
+import award5 from "../assets/art/award-5.jpeg";
 import type { ArtPiece } from "./artworks";
 
 export const kidsArtworks: ArtPiece[] = [
@@ -44,4 +45,5 @@ export const awards: ArtPiece[] = [
   { id: 2, src: award2, title: "Award 2" },
   { id: 3, src: award3, title: "Award 3" },
   { id: 4, src: award4, title: "Award 4" },
+  { id: 5, src: award5, title: "Award 5" },
 ];
