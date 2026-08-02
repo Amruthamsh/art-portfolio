@@ -15,6 +15,7 @@ import kids14 from "../assets/art/kids-14.jpeg";
 import kids15 from "../assets/art/kids-15.jpeg";
 import kids16 from "../assets/art/kids-16.jpeg";
 import kids17 from "../assets/art/kids-17.jpeg";
+import kids18 from "../assets/art/kids-18.jpeg";
 import award1 from "../assets/art/award-1.jpeg";
 import award2 from "../assets/art/award-2.jpeg";
 import award3 from "../assets/art/award-3.jpeg";
@@ -42,6 +43,7 @@ export const kidsArtworks: ArtPiece[] = [
   { id: 15, src: kids15, title: "Young Artist 15" },
   { id: 16, src: kids16, title: "Young Artist 16" },
   { id: 17, src: kids17, title: "Young Artist 17" },
+  { id: 18, src: kids18, title: "Young Artist 18" },
 ];
 
 export const awards: ArtPiece[] = [
