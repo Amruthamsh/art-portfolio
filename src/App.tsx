@@ -5,7 +5,7 @@ import Gallery from "./components/Gallery";
 import KidsGallery from "./components/KidsGallery";
 import Awards from "./components/Awards";
 import Shop from "./components/Shop";
-import { whatsappLink } from "./data/contact";
+import { whatsappLink, phoneNumber, email } from "./data/contact";
 
 function Divider() {
   return <div className="w-12 h-px bg-neutral-200 mx-auto" />;
@@ -34,14 +34,28 @@ export default function App() {
         <p className="text-neutral-400 text-sm">
           Brush & Bloom &mdash; Made with love and paint-stained hands
         </p>
-        <a
-          href={whatsappLink("Hi! I'd like to get in touch.")}
-          target="_blank"
-          rel="noreferrer"
-          className="inline-block mt-3 text-sm text-neutral-500 hover:text-neutral-900 transition-colors"
-        >
-          Contact us on WhatsApp
-        </a>
+        <div className="mt-3 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-neutral-500">
+          <a
+            href={whatsappLink("Hi! I'd like to get in touch.")}
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-neutral-900 transition-colors"
+          >
+            WhatsApp
+          </a>
+          <a
+            href={`tel:${phoneNumber}`}
+            className="hover:text-neutral-900 transition-colors"
+          >
+            {phoneNumber}
+          </a>
+          <a
+            href={`mailto:${email}`}
+            className="hover:text-neutral-900 transition-colors"
+          >
+            {email}
+          </a>
+        </div>
       </footer>
     </div>
   );
