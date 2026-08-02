@@ -6,6 +6,7 @@ import acrylic5 from "../assets/art/acrylic-5.jpeg";
 import acrylic6 from "../assets/art/acrylic-6.jpeg";
 import acrylic7 from "../assets/art/acrylic-7.jpeg";
 import acrylic8 from "../assets/art/acrylic-8.jpeg";
+import acrylic9 from "../assets/art/acrylic-9.jpeg";
 import pencil1 from "../assets/art/pencil-1.jpeg";
 import pencil2 from "../assets/art/pencil-2.jpeg";
 import pencil3 from "../assets/art/pencil-3.jpeg";
@@ -61,7 +62,7 @@ export const categories: Category[] = [
 ];
 
 export const artworks: Artwork[] = [
-  { id: 1, src: acrylic1, title: "Buddha in Bloom", category: "Acrylic" },
+  { id: 1, src: acrylic9, title: "Lord Ganesha", category: "Acrylic" },
   { id: 2, src: acrylic2, title: "Vibrant Threads", category: "Acrylic" },
   { id: 3, src: acrylic3, title: "Color Symphony", category: "Acrylic" },
   { id: 4, src: acrylic4, title: "Buddha Serenity", category: "Acrylic" },
@@ -69,15 +70,16 @@ export const artworks: Artwork[] = [
   { id: 6, src: acrylic6, title: "Azure Dreams", category: "Acrylic" },
   { id: 7, src: acrylic7, title: "Golden Hour", category: "Acrylic" },
   { id: 8, src: acrylic8, title: "Wild Heart", category: "Acrylic" },
+  { id: 9, src: acrylic1, title: "Buddha in Bloom", category: "Acrylic" },
   { id: 10, src: pencil1, title: "Graphite Dreams", category: "Pencil" },
   { id: 11, src: pencil2, title: "Lines & Shadows", category: "Pencil" },
   { id: 12, src: pencil3, title: "Delicate Study", category: "Pencil" },
   { id: 13, src: pencil4, title: "Deep Focus", category: "Pencil" },
   { id: 14, src: pen1, title: "Ink Whispers", category: "Pen" },
-  { id: 15, src: sketchPen1, title: "Neon Strokes",     category: "Brush Pen" },
-  { id: 16, src: sketchPen2, title: "Vivid Paths",     category: "Brush Pen" },
-  { id: 17, src: sketchPen3, title: "Chromatic Flow",     category: "Brush Pen" },
-  { id: 18, src: sketchPen4, title: "Electric Garden",     category: "Brush Pen" },
+  { id: 15, src: sketchPen1, title: "Neon Strokes", category: "Brush Pen" },
+  { id: 16, src: sketchPen2, title: "Vivid Paths", category: "Brush Pen" },
+  { id: 17, src: sketchPen3, title: "Chromatic Flow", category: "Brush Pen" },
+  { id: 18, src: sketchPen4, title: "Electric Garden", category: "Brush Pen" },
   { id: 19, src: mandala1, title: "Sacred Geometry", category: "Mandala" },
   { id: 20, src: mandala2, title: "Mandala in Motion", category: "Mandala" },
   { id: 21, src: clay1, title: "Earth & Form", category: "Clay" },
@@ -86,7 +88,7 @@ export const artworks: Artwork[] = [
   { id: 24, src: clay5, title: "Terracotta Tales", category: "Clay" },
   { id: 25, src: clay6, title: "Molded Moments", category: "Clay" },
   { id: 26, src: clay7, title: "Clay Reverie", category: "Clay" },
-  { id: 27, src: lippon1, title: "Lippan Glow",     category: "Lippon" },
-  { id: 28, src: lippon2, title: "Mirror Shimmer",     category: "Lippon" },
+  { id: 27, src: lippon1, title: "Lippan Glow", category: "Lippon" },
+  { id: 28, src: lippon2, title: "Mirror Shimmer", category: "Lippon" },
   { id: 29, src: craft1, title: "Handmade Whimsy", category: "Craft" },
 ];
