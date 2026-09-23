@@ -5,6 +5,7 @@ import Gallery from "./components/Gallery";
 import KidsGallery from "./components/KidsGallery";
 import Awards from "./components/Awards";
 import Shop from "./components/Shop";
+import { FEATURES } from "./config/features";
 import { whatsappLink, phoneNumber, email } from "./data/contact";
 
 function Divider() {
@@ -17,7 +18,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white">
       <Header page={page} onNavigate={setPage} />
-      {page === "shop" ? (
+      {page === "shop" && FEATURES.enableCommerce ? (
         <Shop />
       ) : (
         <>

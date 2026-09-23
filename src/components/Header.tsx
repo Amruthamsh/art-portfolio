@@ -1,4 +1,5 @@
 import { whatsappLink } from "../data/contact";
+import { FEATURES } from "../config/features";
 
 interface HeaderProps {
   page: "home" | "shop";
@@ -37,15 +38,17 @@ export default function Header({ page, onNavigate }: HeaderProps) {
             {link.label}
           </a>
         ))}
-        <button
-          type="button"
-          onClick={() => onNavigate(page === "shop" ? "home" : "shop")}
-          className={`cursor-pointer transition-colors ${
-            page === "shop" ? "text-neutral-900" : "hover:text-neutral-900"
-          }`}
-        >
-          Shop
-        </button>
+        {FEATURES.enableCommerce && (
+          <button
+            type="button"
+            onClick={() => onNavigate(page === "shop" ? "home" : "shop")}
+            className={`cursor-pointer transition-colors ${
+              page === "shop" ? "text-neutral-900" : "hover:text-neutral-900"
+            }`}
+          >
+            Shop
+          </button>
+        )}
       </nav>
 
       <h1 className="font-serif text-5xl md:text-7xl font-semibold tracking-tight text-neutral-900">
@@ -60,35 +63,37 @@ export default function Header({ page, onNavigate }: HeaderProps) {
       </p>
       <div className="mt-8 w-12 h-px bg-neutral-300 mx-auto" />
 
-      <div className="mt-10 flex flex-wrap justify-center gap-4">
-        <a
-          href={whatsappLink(
-            "Hi! I'd like to enroll my child in drawing classes.",
+      {FEATURES.enableCommerce && (
+        <div className="mt-10 flex flex-wrap justify-center gap-4">
+          <a
+            href={whatsappLink(
+              "Hi! I'd like to enroll my child in drawing classes.",
+            )}
+            target="_blank"
+            rel="noreferrer"
+            className="px-6 py-3 bg-neutral-900 text-white text-sm rounded-full hover:bg-neutral-700 transition-colors"
+          >
+            Enroll in Drawing Classes
+          </a>
+          {page === "shop" ? (
+            <button
+              type="button"
+              onClick={() => onNavigate("home")}
+              className="px-6 py-3 border border-neutral-300 text-neutral-700 text-sm rounded-full hover:border-neutral-900 hover:text-neutral-900 transition-colors cursor-pointer"
+            >
+              Back to Gallery
+            </button>
+          ) : (
+            <button
+              type="button"
+              onClick={() => onNavigate("shop")}
+              className="px-6 py-3 border border-neutral-300 text-neutral-700 text-sm rounded-full hover:border-neutral-900 hover:text-neutral-900 transition-colors cursor-pointer"
+            >
+              Buy Paintings
+            </button>
           )}
-          target="_blank"
-          rel="noreferrer"
-          className="px-6 py-3 bg-neutral-900 text-white text-sm rounded-full hover:bg-neutral-700 transition-colors"
-        >
-          Enroll in Drawing Classes
-        </a>
-        {page === "shop" ? (
-          <button
-            type="button"
-            onClick={() => onNavigate("home")}
-            className="px-6 py-3 border border-neutral-300 text-neutral-700 text-sm rounded-full hover:border-neutral-900 hover:text-neutral-900 transition-colors cursor-pointer"
-          >
-            Back to Gallery
-          </button>
-        ) : (
-          <button
-            type="button"
-            onClick={() => onNavigate("shop")}
-            className="px-6 py-3 border border-neutral-300 text-neutral-700 text-sm rounded-full hover:border-neutral-900 hover:text-neutral-900 transition-colors cursor-pointer"
-          >
-            Buy Paintings
-          </button>
-        )}
-      </div>
+        </div>
+      )}
     </header>
   );
 }
