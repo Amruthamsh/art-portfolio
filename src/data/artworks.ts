@@ -27,6 +27,8 @@ import clay7 from "../assets/art/clay-7.jpeg";
 import lippon1 from "../assets/art/lippon-1.jpeg";
 import lippon2 from "../assets/art/lippon-2.jpeg";
 import craft1 from "../assets/art/craft-1.jpeg";
+import portrait1 from "../assets/art/portrait-1.jpeg";
+import portrait2 from "../assets/art/portrait-2.jpeg";
 
 export type Category =
   | "All"
@@ -37,7 +39,8 @@ export type Category =
   | "Mandala"
   | "Clay"
   | "Lippon"
-  | "Craft";
+  | "Craft"
+  | "Portrait";
 
 export interface ArtPiece {
   id: number;
@@ -59,6 +62,7 @@ export const categories: Category[] = [
   "Clay",
   "Lippon",
   "Craft",
+  "Portrait",
 ];
 
 export const artworks: Artwork[] = [
@@ -91,4 +95,6 @@ export const artworks: Artwork[] = [
   { id: 27, src: lippon1, title: "Lippan Glow", category: "Lippon" },
   { id: 28, src: lippon2, title: "Mirror Shimmer", category: "Lippon" },
   { id: 29, src: craft1, title: "Handmade Whimsy", category: "Craft" },
+  { id: 30, src: portrait1, title: "Portrait 1", category: "Portrait" },
+  { id: 31, src: portrait2, title: "Portrait 2", category: "Portrait" },
 ];
